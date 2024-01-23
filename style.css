@@ -1,44 +1,150 @@
+body {
+  background: black;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
 }
 
-body {
-  display: flex;
-  justify-content: center;
-  background: black;
-}
-.outer {
-  display: flex;
-  width: fit-content;
-  max-width: 1200px;
-  height: 100vh;
-  gap: 2rem;
-  padding: 4rem;
-  margin: auto;
-}
-
-#card-container {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.card {
-  background-color: white;
-}
-
-.draw {
-  background-color: black;
-}
-
-#tools {
+#root {
+  background-image: url(./assets/images/retro-background.png);
+  min-height: 100svh;
+  max-width: 1240px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  margin: auto;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+header, footer, .display {
+  background: rgba(224, 255, 255, 0.8);
+  box-shadow: 0 0 12px black;
+}
+
+header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 2rem 1rem;
+  z-index: 2;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.display {
+  width: 90vw;
+  height: 400px;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 1rem;
+}
+
+nav {
+  text-align: center;
+}
+
+nav ul {
+  display: flex;
+  padding: 1rem 1rem 0;
+  gap: 1rem;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+}
+
+div.shapes {
+  position: absolute;
+  bottom: -10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1000px;
+  transform: translateX(5px);
+}
+
+div.diamond {
+  background: black;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  height: 20px;
+  width: 20px;
+}
+
+div.circle {
+  background: black;
+  height: 20px;
+  width: 20px;
+  border-radius: 100%;
+  transform: translateX(-10px);
+}
+
+div.line {
+  width: 80%;
+  height: 10px;
+  background: black;
+  transform: translateX(-5px);
+}
+
+.flex {
+  display: flex;
+}
+.col {
+  flex-direction: column;
+}
+.center {
+  align-items: center;
+  justify-content: center;
+}
+.relative {
+  position: relative;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
   gap: 0.5rem;
+  font-size: 1rem;
+  width: 100vw;
+}
+
+.social-links li {
+  border:2px solid black;
+  border-radius: 12px 12px 0 0;
+  padding: .25rem;
+}
+
+.check-on-us {
+  padding-bottom: 1rem;
+}
+
+#play-game {
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  background: black;
   color: white;
 }
 
-#tools > * {
-    padding: .5rem 1rem;
+aside.left {
+  position: absolute;
+  color: white;
 }

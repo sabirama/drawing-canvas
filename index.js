@@ -1,45 +1,30 @@
-const cardContainer = document.getElementById("card-container");
-const canvas = 600;
-const cell = 90 * 90;
-let tool = 'draw';
+function header() {
+    const root =  document.getElementById('root')
+    const header = document.createElement('header');
+    header.innerHTML = `
+    <a href="./index.html">HOME</a>
+    <nav>
+        <h2>Latest Games</h2>
+        <ul>
+            <li><a href="#">Chess</a></li>
+            <li><a href="#">Tic Tac Toe</a></li>
+            <li><a href="#">Snake</a></li>
+            <li><a href="#">All Games</a></li>
+        </ul>
+    </nav>
+    `;
 
-function createCard() {
-  const card = document.createElement("div");
-  card.classList = "card";
-  card.style = `height: ${(canvas/Math.sqrt(cell))}px; width: ${(canvas/Math.sqrt(cell))}px;`
-  cardContainer.appendChild(card);
+   root.insertBefore(header, root.firstChild);
 }
 
-for (let i = 0; i < ((cell)); i++) {
- if (i < ((cell))) {
-   createCard();
- }
+function footer() {
+    const footer = document.createElement('footer');
+    footer.innerHTML = `
+    &copy; MINI GAMES 2024, All Rights Reserved.
+    `;
+
+    document.getElementById('root').appendChild(footer);
 }
 
-cardContainer.style.maxHeight = `${canvas}px`;
-cardContainer.style.maxWidth = `${canvas}px`;
-
-document.querySelectorAll('.card').forEach(item => {
-  item.addEventListener('dragenter', ()=> {
-    switch (tool) {
-        case 'draw':
-            item.classList.add('draw');
-            break;
-        case 'erase':
-            item.classList.remove('draw');
-    }
-})
-})
-
-document.querySelectorAll('.tool-button').forEach(button => {
-    button.addEventListener('click', (e)=> {
-        tool = e.target.value;
-        console.log(tool)
-    })
-})
-
-document.querySelector('.clear').addEventListener('click',()=> {
-    document.querySelectorAll('.draw').forEach(cell => {
-        cell.classList.remove('draw');
-    })
-})
+header();
+footer();

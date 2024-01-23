@@ -3,19 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Mini Games</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div class="outer">
-        <div id="tools">
-            <span>TOOLS</span>
-            <button value="draw" class="tool-button">Draw</button>
-            <button value="erase" class="tool-button">Erase</button>
-            <button class="clear">Clear All</button>
-        </div>
-        <div id="card-container"></div>
-      </div>
-      <script src="index.js"></script>
+    <section id="root">
+        <main>
+           <div class="display">
+                <h1>MINI GAMES</h1>
+                <a href="./games.html" id="play-game">Play a Game</a>
+                <div class="relative flex col center">
+                    <h3 class="check-on-us">Check us on:</h3>
+                    <ul class="social-links">
+                        <li><a href="">Github</a></li>
+                        <li><a href="">Discord</a></li>
+                        <li><a href="">Youtube</a></li>
+                        <li><a href="">Patreon</a></li>
+
+                        <div class="shapes">
+                            <div class="diamond"></div>
+                            <div class="line"></div>
+                            <div class="circle"></div>
+                         </div>
+                    </ul>
+                </div>
+           </div>
+        </main>
+    </section>
+    <script src="./index.js"></script>
 </body>
 </html>
