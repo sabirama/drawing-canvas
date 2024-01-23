@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background: black;
+}
+.outer {
+  display: flex;
+  width: fit-content;
+  max-width: 1200px;
+  height: 100vh;
+  gap: 2rem;
+  padding: 4rem;
+  margin: auto;
+}
+
+#card-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: white;
+}
+
+.draw {
+  background-color: black;
+}
+
+#tools {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: white;
+}
+
+#tools > * {
+    padding: .5rem 1rem;
+}
